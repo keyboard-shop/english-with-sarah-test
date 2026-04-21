@@ -1,10 +1,14 @@
 
 
 metadata.json <=== i deleted it from english-with-sarah88
-
 {
   "name": "English with Sarah",
   "description": "A sleek and modern blog for English language learners, featuring practical lessons, grammar tips, and speaking guides.",
   "requestFramePermissions": [],
   "majorCapabilities": []
 }
+
+
+how to CloudFlare Pages:
+https://www.youtube.com/watch?v=W0jP1Zdoc-U
+When you click "create an application", under the first section there's a small subtext that says "Looking to deploy Pages? Get started" with a link to click on. That's how you create a page. Otherwise you will be creating a worker.
