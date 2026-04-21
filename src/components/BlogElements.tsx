@@ -102,9 +102,13 @@ export const Hero: React.FC = () => {
             transition={{ delay: 0.3 }}
             className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
           >
-            <a href="#lessons" className="bg-slate-900 dark:bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-slate-800 dark:hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl active:scale-95">
+            {/* <a href="#lessons" className="bg-slate-900 dark:bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-slate-800 dark:hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl active:scale-95">
               Browse Lessons
-            </a>
+            </a> */}
+            
+            <Link to="/" className="bg-slate-900 dark:bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-slate-800 dark:hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl active:scale-95">
+              Browse Lessons
+            </Link>
             <Link to="/contact" className="bg-white dark:bg-slate-700 border-2 border-slate-100 dark:border-slate-600 text-slate-700 dark:text-white px-8 py-4 rounded-xl font-bold hover:bg-slate-50 dark:hover:bg-slate-600 transition-all active:scale-95">
               Get in Touch
             </Link>
