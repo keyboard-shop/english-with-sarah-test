@@ -11,7 +11,7 @@ const POSTS_PER_PAGE = 6;
 
 export const Home: React.FC = () => {
   React.useEffect(() => {
-    updateMeta('Home', 'Practical English lessons for modern professionals. Master language skills beyond textbooks.');
+    updateMeta('Home', 'Practical English lessons for modern professionals. Master7171 language skills beyond textbooks.');
   }, []);
   const { currentPage, setCurrentPage } = useAppContext();
   const posts = postsData as Post[];
