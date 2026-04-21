@@ -11,17 +11,50 @@ const POSTS_PER_PAGE = 6;
 
 export const Home: React.FC = () => {
 
-const { currentPage, setCurrentPage } = useAppContext();// new place added
+  // option-1 original start works =================================
+//const { currentPage, setCurrentPage } = useAppContext();// new place added
+//   React.useEffect(() => {
+//     updateMeta('Home', 'Practical English lessons for modern professionals. Master language skills beyond textbooks.');
+//   //setCurrentPage(1); // Reset on mount
+//    }, []);
+//   //}, [setCurrentPage]);
+//   const { currentPage, setCurrentPage } = useAppContext(); //original
+//   const posts = postsData as Post[];
+//   const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE);
+//   const currentPosts = posts.slice(
+//     (currentPage - 1) * POSTS_PER_PAGE,
+//     currentPage * POSTS_PER_PAGE
+//   );
+//   //original
+//   // const handlePageChange = (page: number) => {
+//   //   setCurrentPage(page);
+//   //   window.scrollTo({ top: 0, behavior: 'smooth' });
+//   // };
+//   // for pagination
+//  const handlePageChange = (page: number) => {
+//     setCurrentPage(page);
+//     document.getElementById('lessons')?.scrollIntoView({ behavior: 'smooth' });
+//   };
+// original finish ========================================
 
+
+
+
+// option-2
   React.useEffect(() => {
     updateMeta('Home', 'Practical English lessons for modern professionals. Master language skills beyond textbooks.');
-  //setCurrentPage(1); // Reset on mount
-  
-   }, []);
-  //}, [setCurrentPage]);
+  }, []);
+  const { currentPage, setCurrentPage } = useAppContext();
+  const isFirstRender = React.useRef(true);
 
+  React.useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
+    document.getElementById('lessons')?.scrollIntoView({ behavior: 'smooth' });
+  }, [currentPage]);
 
-  // const { currentPage, setCurrentPage } = useAppContext(); original
   const posts = postsData as Post[];
   
   const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE);
@@ -30,18 +63,11 @@ const { currentPage, setCurrentPage } = useAppContext();// new place added
     currentPage * POSTS_PER_PAGE
   );
 
-
-  //original
-  // const handlePageChange = (page: number) => {
-  //   setCurrentPage(page);
-  //   window.scrollTo({ top: 0, behavior: 'smooth' });
-  // };
-
-
- const handlePageChange = (page: number) => {
+  const handlePageChange = (page: number) => {
     setCurrentPage(page);
-    document.getElementById('lessons')?.scrollIntoView({ behavior: 'smooth' });
   };
+
+
 
 
 
