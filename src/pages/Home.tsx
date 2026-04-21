@@ -15,10 +15,10 @@ const { currentPage, setCurrentPage } = useAppContext();// new place added
 
   React.useEffect(() => {
     updateMeta('Home', 'Practical English lessons for modern professionals. Master language skills beyond textbooks.');
-  setCurrentPage(1); // Reset on mount
+  //setCurrentPage(1); // Reset on mount
   
-  // }, []); original
-  }, [setCurrentPage]);
+   }, []);
+  //}, [setCurrentPage]);
 
 
   // const { currentPage, setCurrentPage } = useAppContext(); original
@@ -48,7 +48,7 @@ const { currentPage, setCurrentPage } = useAppContext();// new place added
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
           <div>
             <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white mb-3">
-              Practical Lessons testing cloudflare
+              Practical Lessons 77777777777 testing cloudflare
             </h2>
             <p className="text-slate-500 dark:text-slate-400 max-w-lg">
               Explore our latest articles designed to help you improve your grammar, speaking, and writing skills with real-world examples.

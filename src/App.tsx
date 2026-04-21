@@ -9,20 +9,20 @@ import { Contact } from './pages/Contact';
 import { NotFound } from './pages/NotFound';
 
 
-import { useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
-import { useAppContext } from './context/AppContext';
+// import { useLocation } from 'react-router-dom';
+// import { useEffect } from 'react';
+// import { useAppContext } from './context/AppContext';
 
 // Lazy load privacy/terms if they were added, but for now we define basic pages
 export default function App() {
 
-    const location = useLocation();
-  const { setCurrentPage } = useAppContext();
- useEffect(() => {
-    if (location.pathname === '/') {
-      setCurrentPage(1);
-    }
-  }, [location.pathname, setCurrentPage]);
+//     const location = useLocation();
+//   const { setCurrentPage } = useAppContext();
+//  useEffect(() => {
+//     if (location.pathname === '/') {
+//       setCurrentPage(1);
+//     }
+//   }, [location.pathname, setCurrentPage]);
 
   return (
     <AppProvider>
