@@ -35,7 +35,7 @@ export const Home: React.FC = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
           <div>
             <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white mb-3">
-              Practical Lessons
+              Practical Lessons testing cloudflare
             </h2>
             <p className="text-slate-500 dark:text-slate-400 max-w-lg">
               Explore our latest articles designed to help you improve your grammar, speaking, and writing skills with real-world examples.
