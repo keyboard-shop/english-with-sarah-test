@@ -30,13 +30,18 @@ const { currentPage, setCurrentPage } = useAppContext();// new place added
     currentPage * POSTS_PER_PAGE
   );
 
-  const handlePageChange = (page: number) => {
+
+  //original
+  // const handlePageChange = (page: number) => {
+  //   setCurrentPage(page);
+  //   window.scrollTo({ top: 0, behavior: 'smooth' });
+  // };
+
+
+ const handlePageChange = (page: number) => {
     setCurrentPage(page);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    document.getElementById('lessons')?.scrollIntoView({ behavior: 'smooth' });
   };
-
-
-
 
 
 
