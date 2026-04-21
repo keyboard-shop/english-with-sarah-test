@@ -10,10 +10,18 @@ import { updateMeta } from '../lib/utils';
 const POSTS_PER_PAGE = 6;
 
 export const Home: React.FC = () => {
+
+const { currentPage, setCurrentPage } = useAppContext();// new place added
+
   React.useEffect(() => {
     updateMeta('Home', 'Practical English lessons for modern professionals. Master language skills beyond textbooks.');
-  }, []);
-  const { currentPage, setCurrentPage } = useAppContext();
+  setCurrentPage(1); // Reset on mount
+  
+  // }, []); original
+  }, [setCurrentPage]);
+
+
+  // const { currentPage, setCurrentPage } = useAppContext(); original
   const posts = postsData as Post[];
   
   const totalPages = Math.ceil(posts.length / POSTS_PER_PAGE);
@@ -26,6 +34,11 @@ export const Home: React.FC = () => {
     setCurrentPage(page);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+
+
+
+
+
 
   return (
     <div className="space-y-16">
