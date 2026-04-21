@@ -1,0 +1,10 @@
+
+
+metadata.json <=== i deleted it from english-with-sarah88
+
+{
+  "name": "English with Sarah",
+  "description": "A sleek and modern blog for English language learners, featuring practical lessons, grammar tips, and speaking guides.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

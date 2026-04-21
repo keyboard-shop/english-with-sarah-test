@@ -1,0 +1,52 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  
+  --color-brand: #2563eb;
+  --color-brand-dark: #1d4ed8;
+  --color-bg: #f8fafc;
+  --color-card: #ffffff;
+  --color-text: #0f172a;
+  --color-text-muted: #64748b;
+  --color-border: #e2e8f0;
+}
+
+:root {
+  --spacing-unit: 1rem;
+}
+
+@layer base {
+  body {
+    @apply bg-[var(--color-bg)] text-[var(--color-text)] font-sans antialiased;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight text-slate-900 dark:text-white;
+  }
+}
+
+/* Dark mode overrides */
+.dark {
+  --color-bg: #0f172a;
+  --color-card: #1e293b;
+  --color-text: #f1f5f9;
+  --color-text-muted: #94a3b8;
+  --color-border: #334155;
+}
+
+.markdown-body {
+  @apply prose prose-slate dark:prose-invert max-w-none;
+}
+
+.markdown-body h1 { @apply text-3xl font-extrabold mb-6; }
+.markdown-body h2 { @apply text-2xl font-bold mt-8 mb-4; }
+.markdown-body h3 { @apply text-xl font-bold mt-6 mb-3; }
+.markdown-body p { @apply mb-4 leading-relaxed; }
+.markdown-body ul { @apply list-disc pl-6 mb-4 space-y-2; }
+.markdown-body ol { @apply list-decimal pl-6 mb-4 space-y-2; }
+.markdown-body blockquote { @apply border-l-4 border-blue-500 pl-4 py-2 italic bg-blue-50 dark:bg-blue-900/20 rounded-r-lg mb-6; }
+.markdown-body strong { @apply font-bold text-slate-900 dark:text-white; }
+
